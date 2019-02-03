@@ -31,7 +31,7 @@ def form_post():
         final_text = "Slightly Negative"
     else:
         final_text = "Neutral"
-    return render_template("result.html", twitter = twitter_sent, reddit = reddit_sent, twitter_high = twitter_extremes["max"], twitter_low = twitter_extremes["min"], reddit_low = reddit_extremes["min"], reddit_high = reddit_extremes["max"], final_text = final_text)
+    return render_template("result.html", twitter = twitter_sent, reddit = reddit_sent, twitter_high = twitter_extremes["max"], twitter_low = twitter_extremes["min"], reddit_low = reddit_extremes["min"], reddit_high = reddit_extremes["max"], final_text = final_text, text = text)
 
 if __name__ == '__main__':
     app.run(debug=True)

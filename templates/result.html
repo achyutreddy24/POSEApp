@@ -51,6 +51,7 @@ body {
 
 .emphasis {
   background: #ffeebc;
+  padding: 50px;
 }
 
 </style>
@@ -78,7 +79,7 @@ new Chart(document.getElementById("bar-chart"), {
       legend: { display: false },
       title: {
         display: true,
-        text: 'Public Opinion from Twitter and Reddit'
+	      text: 'Public Opinion of {{text}} from Twitter and Reddit'
       },
 	    scales: {xAxes: [{beginAtZero: true}]}
     }
