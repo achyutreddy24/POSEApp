@@ -1,0 +1,54 @@
+import praw # simple interface to the reddit API, also handles rate limiting of requests
+import time
+import OAuth2Util
+
+from pyscripts import sentiment
+
+#  Import Settings from Config.py
+try:
+    from pyscripts import Config
+    USERAGENT = Config.USERAGENT
+    CLIENT_ID = Config.CLIENT_ID
+    CLIENT_SECRET = Config.CLIENT_SECRET
+    USERNAME = Config.USERNAME
+    PASSWORD = Config.PASSWORD
+    
+    print("Loaded Config")
+except ImportError:
+    print("Error Importing Config.py")
+    
+WAIT = 5
+SENTIMENTSr = []
+
+r = praw.Reddit(client_id = CLIENT_ID,
+                client_secret = CLIENT_SECRET,
+                user_agent = USERAGENT,
+                username = USERNAME,
+                password = PASSWORD)
+#r = praw.Reddit(USERAGENT)
+#r.login(USERNAME, PASSWORD)
+#o = OAuth2Util.OAuth2Util(r)
+
+def scan(keyword):
+    count = 0
+    subreddit = r.subreddit("The_Donald")
+    for comment in subreddit.stream.comments():
+        cbody = comment.body
+        if count > 100:
+            break
+        if keyword not in cbody:
+            print("Garbage")
+            continue
+        else:
+            count += 1
+            print("Found comment")
+            SENTIMENTSr.append(sentiment.sentiment(cbody))
+        
+def find(keyword):
+    SENTIMENTSr = []
+    for _ in range(1,10):
+        scan(keyword)
+        print("Sleeping")
+        time.sleep(WAIT)
+    return repr(sum(SENTIMENTSr)/len(SENTIMENTSr))
+

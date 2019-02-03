@@ -1,0 +1,17 @@
+../../bin/twitterscraper,sha256=UEg49jZ1KBPJXdEbkQkEQIVFbkLP8hCCHNL3Wm0PnJE,241
+twitterscraper-0.9.3.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+twitterscraper-0.9.3.dist-info/METADATA,sha256=vChI42eoAWUVpnr_DzHnhLhDTMsSh-HoiFIB7l3wLxU,368
+twitterscraper-0.9.3.dist-info/RECORD,,
+twitterscraper-0.9.3.dist-info/WHEEL,sha256=GBf6745TJ8PUSVf00LTQs_w-OsUzD9Wc795tFJt0GUs,93
+twitterscraper-0.9.3.dist-info/entry_points.txt,sha256=ZNLGVQ8hTaMD0hjCbi2Oj02lL3Bt2a6gPaUfy4oDjVA,61
+twitterscraper-0.9.3.dist-info/top_level.txt,sha256=Ge2KlJkqIkB2VaoYpqSqUMm2gQKZ0N9iABBBd8kXtmk,15
+twitterscraper/__init__.py,sha256=s99Li-9w4Uv4FNIdSOUlGL9P-lcPDXlsj1Mfn3F5YOQ,342
+twitterscraper/__pycache__/__init__.cpython-37.pyc,,
+twitterscraper/__pycache__/main.cpython-37.pyc,,
+twitterscraper/__pycache__/query.cpython-37.pyc,,
+twitterscraper/__pycache__/ts_logger.cpython-37.pyc,,
+twitterscraper/__pycache__/tweet.cpython-37.pyc,,
+twitterscraper/main.py,sha256=U_5BOnoZoBlg2aTJuRsXJt58MGXDbzJVk6arPGCOcD4,6397
+twitterscraper/query.py,sha256=5oRg59HfkbsEB0dJxz51xy5fMjMLanEjtjtd3almM90,8476
+twitterscraper/ts_logger.py,sha256=lyFyAy4JwU73ZX0FSqyzsU4Min-gfTPrphXHTFEI0lQ,273
+twitterscraper/tweet.py,sha256=tUvrwfMi8fK2xB7Z5za2EGicbu9bGK2Dw7A8VKJdPFk,2284
