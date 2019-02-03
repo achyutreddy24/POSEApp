@@ -12,7 +12,7 @@ def result():
 @app.route('/', methods=['POST'])
 def form_post():
     text = request.form['text']
-    return twitter.find(text) + " " + reddit.find(text)
+    return render_template("result.html", data = [twitter.find(text), reddit.find(text)]) 
 
 if __name__ == '__main__':
     app.run(debug=True)
