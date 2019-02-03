@@ -9,4 +9,4 @@ def find(keyword):
     gen = api.search_comments(q=keyword, limit=500)
     for c in gen:
         SENTIMENTS.append(sentiment.sentiment(c.body))
-    return sum(SENTIMENTS)/len(SENTIMENTS)
+    return int(1000*sum(SENTIMENTS)/len(SENTIMENTS))
