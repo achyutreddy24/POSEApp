@@ -3,8 +3,34 @@
 
 <style>
 </style>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
 <body>
-    <td>{{twitter}}</td>
-    <td>{{reddit}}</td>
+
+<canvas id="bar-chart" width="800" height="450"></canvas>
+<script>
+// Bar chart
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["Twitter", "Reddit"],
+      datasets: [
+        {
+          label: "Sentiment Metric",
+          backgroundColor: ["#3e95cd", "#8e5ea2"]
+          data: [{{twitter}},{{reddit}}]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Public Opinion from Twitter and Reddit'
+      }
+    }
+});
+</script>
 </body>
 </html>
